@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/icon.jpeg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Product Detail Page</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="bg-white px-5 py-3 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-red-600 text-xl font-bold">mizanstore</a>
+        <div class="hidden md:flex space-x-4">
+          <a href="#" class="text-gray-800 hover:text-blue-400">Kategori</a>
+          <a href="#" class="text-gray-800 hover:text-blue-400">POD</a>
+          <a href="#" class="text-gray-800 hover:text-blue-400">Self Pub</a>
+          <a href="#" class="text-gray-800 hover:text-blue-400">Ebook</a>
+          <a href="#" class="text-gray-800 hover:text-blue-400">Blog</a>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center space-x-2 hidden md:block">
+          <input
+            type="text"
+            placeholder="Cari Judul"
+            class="border border-gray-300 px-4 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+          />
+          <button
+            class="bg-red-600 text-white px-4 py-1 rounded-lg hover:bg-red-700 transition-colors"
+          >
+            Q
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div
+      id="mobile-menu"
+      class="hidden bg-white shadow-md absolute w-full z-10 md:hidden"
+    >
+      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+        >Kategori</a
+      >
+      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+        >POD</a
+      >
+      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+        >Self Pub</a
+      >
+      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+        >Ebook</a
+      >
+      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+        >Blog</a
+      >
+    </div>
+
+    <!-- card -->
+    <div class="max-w-4xl mx-auto p-4">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2">
+          <img
+            src="images/anak.jpg"
+            alt="Main Product Image"
+            class="mb-4 md:mb-0"
+          />
+          <div class="flex">
+            <img src="images/anak.jpg" alt="Small Image 1" class="w-1/3 p-1" />
+            <img src="images/anak.jpg" alt="Small Image 2" class="w-1/3 p-1" />
+            <img src="images/anak.jpg" alt="Small Image 3" class="w-1/3 p-1" />
+          </div>
+        </div>
+        <div class="md:w-1/2 md:pl-4">
+          <h1 class="text-xl font-bold">KKM: Cinta Rasulullah SAW.</h1>
+          <p class="text-gray-700 mb-2">Tasaro GK - Mizan Publishing</p>
+          <div class="flex mb-4">
+            <h1>Bagikan</h1>
+            <a href="#" class="text-blue-500 mr-2"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="text-blue-500 mr-2"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-blue-500 mr-2"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-blue-500 mr-2"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="text-blue-500"
+              ><i class="fab fa-pinterest"></i
+            ></a>
+          </div>
+          <div>
+            <p class="mb-1">Deskripsi Singkat:</p>
+            <p class="text-gray-800">
+              Buku Cinta Rasulullah Saw. ini berisi tentang kisah hidup
+              Rasulullah Saw. dari sebelum lahir hingga wafat yang...
+            </p>
+            <button class="text-red-500 text-sm">Baca Selengkapnya...</button>
+          </div>
+          <p class="text-xl font-bold text-red-600">Rp 40.000</p>
+          <p class="text-gray-500 line-through">Rp 79.000</p>
+          <div class="flex items-center mt-4">
+            <label for="quantity" class="mr-2">Qty:</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              value="1"
+              class="border p-1 text-center w-16"
+            />
+            <button class="bg-blue-500 text-white py-2 px-4 ml-4">BELI</button>
+            <button class="bg-gray-200 py-2 px-4 ml-2">WISHLIST</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- deksripsi -->
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-orange-300 p-4">
+          <h2 class="font-bold text-xl">Deskripsi</h2>
+        </div>
+        <div class="mt-4 p-4 border border-gray-200">
+          <h3 class="font-semibold text-lg">Spesifikasi Produk</h3>
+          <p>Pre-Order Period: 29 Augustus-13 September 2024</p>
+          <p>Pengiriman Buku: 19 September 2024</p>
+        </div>
+        <div class="mt-4 p-4 border border-gray-200">
+          <h3 class="font-semibold text-lg">Teks belakang buku:</h3>
+          <p>
+            Kota kecil itu dipenuhi sampah. Botol plastik, kaleng kemasan, dan
+            sisa-sisa makanan telah mengotori banyak tempat.
+          </p>
+          <p>
+            <span class="font-bold">Hueeek!</span> Aroma sampah tak sedap
+            melayang di udara, mengganggu acara makan bersama.
+          </p>
+          <p>
+            Bunbun dan Papap terlihat panik. Sambil mengajak Kaka dan Dede,
+            mereka pun beraksi!
+          </p>
+          <p>
+            <span class="font-bold">Ayo, ikuti kisah kepahlawanan mereka!</span>
+          </p>
+          <p>Dapatkan juga informasi tentang sampah dan cara mengelolanya!</p>
+        </div>
+        <div class="mt-4 p-4 border border-gray-200">
+          <h3 class="font-semibold text-lg">Keunggulan:</h3>
+          <ul class="list-disc pl-5">
+            <li>
+              Cerita bertema perubahan iklim (di buku ini khusus polusi udara),
+              masalah yang penting dan menjadi perhatian seluruh dunia saat ini.
+            </li>
+            <li>Cerita dan ilustrasi menarik dan jenaka.</li>
+            <li>Cerita relate dengan kehidupan sehari-hari.</li>
+            <li>Dilengkapi fakta tentang polusi udara.</li>
+            <li>Teradapat aktivitas DIY untuk anak dan orangtua.</li>
+            <li>Penulisan naskah disupervisi oleh tim ahli.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- tentang penulis -->
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/3">
+            <img
+              src="images/h noor.jpeg"
+              alt="Noor H. Dee"
+              class="w-full h-auto"
+            />
+          </div>
+          <div class="md:w-2/3 md:pl-6">
+            <h2 class="font-bold text-xl mt-4 md:mt-0">Tentang Noor H. Dee</h2>
+            <p>
+              Noor H. Dee ingin sekali hidup di dalam hutan, membangun rumah
+              pohon dan bersahabat dengan alam liar. Itu sebabnya, dia ingin
+              menjaga kelestarian hutan karena dia menganggap hutan adalah
+              rumahnya dan juga rumah bagi banyak makhluk hidup lainnya.
+            </p>
+            <h2 class="font-bold text-xl mt-4">Tentang Ilustrator</h2>
+            <p>Shafaye'ah</p>
+            <p>
+              Shafa merupakan seorang seniman bikin-bikin asal Bandung. Menyukai
+              eksplorasi material dan visual yang semrawut serta tertarik pada
+              alam hewan yang bikin takjub. Memiliki minat terhadap daur ulang
+              membuatnya bersemangat untuk bikin karya dari bahan dan barang
+              bekas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center md:text-left">
+            <h3 class="text-lg font-bold mb-4">Mizanstore</h3>
+            <p>PT. Millennia Tijara Semesta</p>
+            <p>Jl. Joe No. 11</p>
+            <p>Jagakarsa, Jakarta Selatan</p>
+            <p>Indonesia - 12610</p>
+            <p>Whatsapp</p>
+            <p>cs@mizan.com</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <h3 class="text-lg font-bold mb-4">Mizanstore</h3>
+            <ul>
+              <li><a href="#">Tentang Mizanstore</a></li>
+              <li><a href="#">Affiliate Program</a></li>
+              <li><a href="#">Official Blog</a></li>
+              <li><a href="#">Print On Demand POD</a></li>
+              <li><a href="#">Daftar Penerbit</a></li>
+              <li><a href="#">Jadi Reseller</a></li>
+              <li><a href="#">Info Karir</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <h3 class="text-lg font-bold mb-3">Bantuan</h3>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Konfirmasi Pembayaran</a></li>
+              <li><a href="#">Lacak Pesanan</a></li>
+              <li><a href="#">Cara Belanja</a></li>
+              <li><a href="#">Syarat dan Ketentuan</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Kebijakan Pengembalian</a></li>
+              <li><a href="#">Kebijakan Pengiriman Barang</a></li>
+            </ul>
+          </div>
+          <div class="mx-auto">
+            <h3 class="text-lg font-bold mb-4 text-center">Ikuti Kami</h3>
+            <ul class="flex justify-center">
+              <li>
+                <a href="#" class="mr-4"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#" class="mr-4"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" class="mr-4"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#" class="mr-4"><i class="fab fa-line"></i></a>
+              </li>
+              <li>
+                <a href="#" class="mr-4"><i class="fab fa-whatsapp"></i></a>
+              </li>
+              <li>
+                <a href="#" class="mr-4"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+            <h3 class="text-lg font-bold mb-4 mt-4 text-center">
+              Info Promo dan Diskon
+            </h3>
+            <form>
+              <input
+                type="email"
+                placeholder="Masukkan email anda"
+                class="border border-gray-700 rounded px-4 py-2 mb-2"
+              />
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    document
+      .getElementById("menu-toggle")
+      .addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("hidden");
+        } else {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+  </script>
+</html>

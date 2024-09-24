@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/icon.jpeg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Product Gallery</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="bg-white px-5 py-3 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-red-600 text-xl font-bold">mizanstore</a>
+        <div class="hidden md:flex space-x-4">
+          <a href="#" class="text-gray-800 hover:text-blue-400">Kategori</a>
+          <a href="#" class="text-gray-800 hover:text-blue-400">POD</a>
+          <a href="#" class="text-gray-800 hover:text-blue-400">Self Pub</a>
+          <a href="#" class="text-gray-800 hover:text-blue-400">Ebook</a>
+          <a href="#" class="text-gray-800 hover:text-blue-400">Blog</a>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center space-x-2 hidden md:block">
+          <input
+            type="text"
+            placeholder="Cari Judul"
+            class="border border-gray-300 px-4 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+          />
+          <button
+            class="bg-red-600 text-white px-4 py-1 rounded-lg hover:bg-red-700 transition-colors"
+          >
+            Q
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div
+      id="mobile-menu"
+      class="hidden bg-white shadow-md absolute w-full z-10 md:hidden"
+    >
+      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+        >Kategori</a
+      >
+      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+        >POD</a
+      >
+      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+        >Self Pub</a
+      >
+      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+        >Ebook</a
+      >
+      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+        >Blog</a
+      >
+    </div>
+
+    <!-- card -->
+    <div class="container mx-auto px-4 py-8">
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+      >
+        <!-- Product 1 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 1"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 100.000</p>
+        </div>
+        <!-- Product 2 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 2"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 150.000</p>
+        </div>
+        <!-- Product 3 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 3"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 200.000</p>
+        </div>
+        <!-- Product 4 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 4"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 250.000</p>
+        </div>
+        <!-- Product 5 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+        <!-- Product 6 -->
+        <div class="border p-4 flex flex-col items-center text-center">
+          <img
+            src="images/book.jpg"
+            alt="Product 5"
+            class="mb-2 hover:opacity-45"
+          />
+          <h3 class="font-bold">Product Name</h3>
+          <p class="text-gray-800">Rp 300.000</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center md:text-left">
+            <h3 class="text-lg font-bold mb-4">Mizanstore</h3>
+            <p>PT. Millennia Tijara Semesta</p>
+            <p>Jl. Joe No. 11</p>
+            <p>Jagakarsa, Jakarta Selatan</p>
+            <p>Indonesia - 12610</p>
+            <p>Whatsapp</p>
+            <p>cs@mizan.com</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <h3 class="text-lg font-bold mb-4">Mizanstore</h3>
+            <ul>
+              <li><a href="#">Tentang Mizanstore</a></li>
+              <li><a href="#">Affiliate Program</a></li>
+              <li><a href="#">Official Blog</a></li>
+              <li><a href="#">Print On Demand POD</a></li>
+              <li><a href="#">Daftar Penerbit</a></li>
+              <li><a href="#">Jadi Reseller</a></li>
+              <li><a href="#">Info Karir</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <h3 class="text-lg font-bold mb-3">Bantuan</h3>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Konfirmasi Pembayaran</a></li>
+              <li><a href="#">Lacak Pesanan</a></li>
+              <li><a href="#">Cara Belanja</a></li>
+              <li><a href="#">Syarat dan Ketentuan</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Kebijakan Pengembalian</a></li>
+              <li><a href="#">Kebijakan Pengiriman Barang</a></li>
+            </ul>
+          </div>
+          <div class="mx-auto">
+            <h3 class="text-lg font-bold mb-4 text-center">Ikuti Kami</h3>
+            <ul class="flex justify-center">
+              <li>
+                <a href="#" class="mr-4"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#" class="mr-4"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" class="mr-4"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#" class="mr-4"><i class="fab fa-line"></i></a>
+              </li>
+              <li>
+                <a href="#" class="mr-4"><i class="fab fa-whatsapp"></i></a>
+              </li>
+              <li>
+                <a href="#" class="mr-4"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+            <h3 class="text-lg font-bold mb-4 mt-4 text-center">
+              Info Promo dan Diskon
+            </h3>
+            <form>
+              <input
+                type="email"
+                placeholder="Masukkan email anda"
+                class="border border-gray-700 rounded px-4 py-2 mb-2"
+              />
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    document
+      .getElementById("menu-toggle")
+      .addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("hidden");
+        } else {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+  </script>
+</html>
