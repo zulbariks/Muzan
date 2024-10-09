@@ -16,14 +16,22 @@
     </style>
   </head>
   <body class="bg-gray-100">
-    <nav class="bg-white px-5 py-3 shadow-md">
+    <nav class="bg-white px-5 py-3 shadow-md relative">
       <div class="container mx-auto flex justify-between items-center">
-        <a href="/" class="text-red-600 text-xl font-bold">mizanstore</a>
+        <a href="index.html" class="text-red-600 text-xl font-bold"
+          >mizanstore</a
+        >
         <div class="hidden md:flex space-x-4">
-          <a href="#" class="text-gray-800 hover:text-blue-400">Kategori</a>
+          <a id="kategori" href="#" class="text-gray-800 hover:text-blue-400"
+            >Kategori</a
+          >
           <a href="pod.html" class="text-gray-800 hover:text-blue-400">POD</a>
-          <a href="#" class="text-gray-800 hover:text-blue-400">Self Pub</a>
-          <a href="#" class="text-gray-800 hover:text-blue-400">Ebook</a>
+          <a href="selfpub.html" class="text-gray-800 hover:text-blue-400"
+            >Self Pub</a
+          >
+          <a href="ebook.html" class="text-gray-800 hover:text-blue-400"
+            >Ebook</a
+          >
           <a href="#" class="text-gray-800 hover:text-blue-400">Blog</a>
         </div>
         <div class="md:hidden">
@@ -44,7 +52,7 @@
             </svg>
           </button>
         </div>
-        <div class="flex items-center space-x-2 hidden md:block">
+        <div class="space-x-2 hidden md:block">
           <input
             type="text"
             placeholder="Cari Judul"
@@ -58,11 +66,64 @@
         </div>
       </div>
     </nav>
+    <!-- yang bisa ngilang -->
+    <div
+      id="ngilang"
+      class="container mx-auto p-4 absolute z-10 bg-white top-16 hidden"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Kategori Buku -->
+        <div>
+          <h2 class="text-red-600 font-bold mb-4">Buku</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <ul class="space-y-2">
+              <li class="hover:text-blue-500">Agama & Spiritualitas</li>
+              <li class="hover:text-blue-500">
+                Bahasa, Pendidikan & Penunjang Pelajaran
+              </li>
+              <li class="hover:text-blue-500">Biografi & Memoar</li>
+              <li class="hover:text-blue-500">Buku Anak</li>
+              <li class="hover:text-blue-500">Buku Impor</li>
+            </ul>
+            <ul class="space-y-2">
+              <li class="hover:text-blue-500">Ekonomi, Bisnis & Keuangan</li>
+              <li class="hover:text-blue-500">Fiksi</li>
+              <li class="hover:text-blue-500">Hiburan, Seni & Budaya</li>
+              <li class="hover:text-blue-500">Kesehatan & Kecantikan</li>
+              <li class="hover:text-blue-500">Komputer & Internet</li>
+            </ul>
+            <ul class="space-y-2">
+              <li class="hover:text-blue-500">Non Fiksi</li>
+              <li class="hover:text-blue-500">Sejarah</li>
+              <li class="hover:text-blue-500">Perjalanan</li>
+              <li class="hover:text-blue-500">Sains & Teknologi</li>
+              <li class="hover:text-blue-500">Sastra & Filsafat</li>
+              <li class="hover:text-blue-500">Sosial & Politik</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Kategori Mainan -->
+        <div>
+          <h2 class="text-red-600 font-bold mb-4">Mainan</h2>
+          <ul class="space-y-2">
+            <li class="hover:text-blue-500">Mainan Edukatif</li>
+            <li class="hover:text-blue-500">Mainan Elektronik</li>
+            <li class="hover:text-blue-500">Mainan Bayi & Balita</li>
+            <li class="hover:text-blue-500">Mainan Umum</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- ending yang bisa ngilang -->
     <div
       id="mobile-menu"
       class="hidden bg-white shadow-md absolute w-full z-10 md:hidden"
     >
-      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+      <a
+        id="ngilang"
+        href="#"
+        class="block px-5 py-3 text-gray-800 hover:text-blue-400"
         >Kategori</a
       >
       <a
@@ -70,10 +131,14 @@
         class="block px-5 py-3 text-gray-800 hover:text-blue-400"
         >POD</a
       >
-      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+      <a
+        href="selfpub.html"
+        class="block px-5 py-3 text-gray-800 hover:text-blue-400"
         >Self Pub</a
       >
-      <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
+      <a
+        href="ebook.html"
+        class="block px-5 py-3 text-gray-800 hover:text-blue-400"
         >Ebook</a
       >
       <a href="#" class="block px-5 py-3 text-gray-800 hover:text-blue-400"
@@ -82,7 +147,39 @@
     </div>
 
     <section class="hero">
-      <img src="images/hero.png" alt="Bonus" class="mx-auto mt-5 w-10/12" />
+      <div class="relative w-10/12 mx-auto mt-5 overflow-hidden">
+        <!-- Carousel Container -->
+        <div
+          id="carousel"
+          class="flex transition-transform duration-500 ease-in-out"
+        >
+          <!-- Slide 1 -->
+          <img
+            src="images/hero.png"
+            alt="Bonus 1"
+            class="w-full flex-shrink-0"
+          />
+          <!-- Slide 2 -->
+          <img
+            src="images/hero2.png"
+            alt="Bonus 2"
+            class="w-full flex-shrink-0"
+          />
+        </div>
+        <!-- Prev and Next buttons -->
+        <button
+          id="prev"
+          class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full"
+        >
+          &#10094;
+        </button>
+        <button
+          id="next"
+          class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full"
+        >
+          &#10095;
+        </button>
+      </div>
     </section>
 
     <!-- special free order -->
@@ -92,14 +189,17 @@
       </h1>
 
       <!-- Container for the cards, with horizontal scrolling on mobile -->
-      <div class="card overflow-x-auto">
-        <div class="flex space-x-4 justify-center">
-          <!-- Card 1 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
+      <div
+        class="card container-card flex md:justify-center gap-x-4 overflow-auto snap-x"
+      >
+        <!-- card 1 -->
+
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/novel 1.png"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -109,13 +209,15 @@
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
             </div>
-          </div>
-          <!-- Card 2 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
+          </a>
+        </div>
+        <!-- card 2 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/novel 1.png"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -124,14 +226,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 3 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/novel 1.png"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -140,14 +244,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 4 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/novel 1.png"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -156,14 +262,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 5 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 5 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/novel 1.png"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -172,14 +280,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 6 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 6 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/novel 1.png"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -188,234 +298,252 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
+            </div></a
+          >
         </div>
       </div>
-      <div>
-        <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-12"
-        >
-          Selengkapnya
-        </button>
-      </div>
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-10"
+      >
+        Selengkapnya
+      </button>
     </section>
 
     <!-- maulid nabi -->
     <section class="container mx-auto p-4 mt-16">
-      <h1 class="text-2xl font-bold mb-4 text-center">SPECIAL MAULID NABI</h1>
+      <h1 class="text-2xl font-bold mb-4 text-center">PROMO MAULID NABI</h1>
 
       <!-- Container for the cards, with horizontal scrolling on mobile -->
-      <div class="card overflow-x-auto">
-        <div class="flex space-x-4 justify-center">
-          <!-- Card 1 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
-            <img
-              src="images/anak.jpg"
-              alt="Product 1"
-              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-            />
-            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-            <span class="text-gray-500">Noor H. Dee</span>
-            <div class="flex flex-col items-start mt-3">
-              <span class="text-gray-500 line-through">Rp 69.000</span>
-              <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
-            <img
-              src="images/anak.jpg"
-              alt="Product 1"
-              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-            />
-            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-            <span class="text-gray-500">Noor H. Dee</span>
-            <div class="flex flex-col items-start mt-3">
-              <span class="text-gray-500 line-through">Rp 69.000</span>
-              <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
-            <img
-              src="images/anak.jpg"
-              alt="Product 1"
-              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-            />
-            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-            <span class="text-gray-500">Noor H. Dee</span>
-            <div class="flex flex-col items-start mt-3">
-              <span class="text-gray-500 line-through">Rp 69.000</span>
-              <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
-            <img
-              src="images/anak.jpg"
-              alt="Product 1"
-              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-            />
-            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-            <span class="text-gray-500">Noor H. Dee</span>
-            <div class="flex flex-col items-start mt-3">
-              <span class="text-gray-500 line-through">Rp 69.000</span>
-              <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 5 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
-            <img
-              src="images/anak.jpg"
-              alt="Product 1"
-              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-            />
-            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-            <span class="text-gray-500">Noor H. Dee</span>
-            <div class="flex flex-col items-start mt-3">
-              <span class="text-gray-500 line-through">Rp 69.000</span>
-              <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 6 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
-            <img
-              src="images/anak.jpg"
-              alt="Product 1"
-              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-            />
-            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-            <span class="text-gray-500">Noor H. Dee</span>
-            <div class="flex flex-col items-start mt-3">
-              <span class="text-gray-500 line-through">Rp 69.000</span>
-              <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <!-- kedua -->
-        <div class="card overflow-x-auto mt-6">
-          <div class="flex space-x-4 justify-center">
-            <!-- Card 1 -->
-            <div
-              class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-            >
-              <img
-                src="images/anak.jpg"
-                alt="Product 1"
-                class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-              />
-              <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-              <span class="text-gray-500">Noor H. Dee</span>
-              <div class="flex flex-col items-start mt-3">
-                <span class="text-gray-500 line-through">Rp 69.000</span>
-                <span class="text-red-500">Rp 58.650</span>
-              </div>
-            </div>
-            <!-- Card 2 -->
-            <div
-              class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-            >
-              <img
-                src="images/anak.jpg"
-                alt="Product 1"
-                class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-              />
-              <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-              <span class="text-gray-500">Noor H. Dee</span>
-              <div class="flex flex-col items-start mt-3">
-                <span class="text-gray-500 line-through">Rp 69.000</span>
-                <span class="text-red-500">Rp 58.650</span>
-              </div>
-            </div>
-            <!-- Card 3 -->
-            <div
-              class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-            >
-              <img
-                src="images/anak.jpg"
-                alt="Product 1"
-                class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-              />
-              <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-              <span class="text-gray-500">Noor H. Dee</span>
-              <div class="flex flex-col items-start mt-3">
-                <span class="text-gray-500 line-through">Rp 69.000</span>
-                <span class="text-red-500">Rp 58.650</span>
-              </div>
-            </div>
-            <!-- Card 4 -->
-            <div
-              class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-            >
-              <img
-                src="images/anak.jpg"
-                alt="Product 1"
-                class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-              />
-              <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-              <span class="text-gray-500">Noor H. Dee</span>
-              <div class="flex flex-col items-start mt-3">
-                <span class="text-gray-500 line-through">Rp 69.000</span>
-                <span class="text-red-500">Rp 58.650</span>
-              </div>
-            </div>
-            <!-- Card 5 -->
-            <div
-              class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-            >
-              <img
-                src="images/anak.jpg"
-                alt="Product 1"
-                class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-              />
-              <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-              <span class="text-gray-500">Noor H. Dee</span>
-              <div class="flex flex-col items-start mt-3">
-                <span class="text-gray-500 line-through">Rp 69.000</span>
-                <span class="text-red-500">Rp 58.650</span>
-              </div>
-            </div>
-            <!-- Card 6 -->
-            <div
-              class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-            >
-              <img
-                src="images/anak.jpg"
-                alt="Product 1"
-                class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-              />
-              <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-              <span class="text-gray-500">Noor H. Dee</span>
-              <div class="flex flex-col items-start mt-3">
-                <span class="text-gray-500 line-through">Rp 69.000</span>
-                <span class="text-red-500">Rp 58.650</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-10"
+      <div
+        class="card container-card flex md:justify-center gap-x-4 overflow-auto snap-x"
+      >
+        <!-- card 1 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
         >
-          Selengkapnya
-        </button>
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 2 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 3 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 4 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 5 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 6 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
       </div>
+      <!-- card 2 -->
+      <div
+        class="card container-card flex md:justify-center gap-x-4 overflow-auto snap-x mt-5"
+      >
+        <!-- card 1 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 2 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 3 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 4 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 5 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 6 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+      </div>
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-10"
+      >
+        Selengkapnya
+      </button>
     </section>
 
     <!-- september deals -->
@@ -423,14 +551,16 @@
       <h1 class="text-2xl font-bold mb-4 text-center">SEPTEMBER DEALS</h1>
 
       <!-- Container for the cards, with horizontal scrolling on mobile -->
-      <div class="card overflow-x-auto">
-        <div class="flex space-x-4 justify-center">
-          <!-- Card 1 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
+      <div
+        class="card container-card flex md:justify-center gap-x-4 overflow-auto snap-x"
+      >
+        <!-- card 1 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/book.jpg"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -439,14 +569,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 2 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/book.jpg"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -455,14 +587,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 3 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/book.jpg"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -471,14 +605,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 4 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/book.jpg"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -487,14 +623,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 5 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 5 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/book.jpg"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -503,14 +641,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 6 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 6 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/book.jpg"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -519,17 +659,15 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
+            </div></a
+          >
         </div>
       </div>
-      <div>
-        <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-12"
-        >
-          Selengkapnya
-        </button>
-      </div>
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-10"
+      >
+        Selengkapnya
+      </button>
     </section>
 
     <!-- buku anak terlaris -->
@@ -539,14 +677,16 @@
       </h1>
 
       <!-- Container for the cards, with horizontal scrolling on mobile -->
-      <div class="card overflow-x-auto">
-        <div class="flex space-x-4 justify-center">
-          <!-- Card 1 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
+      <div
+        class="card container-card flex md:justify-center gap-x-4 overflow-auto snap-x"
+      >
+        <!-- card 1 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/buku.jpg"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -555,14 +695,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 2 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/buku.jpg"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -571,14 +713,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 3 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/buku.jpg"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -587,14 +731,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 4 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/buku.jpg"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -603,14 +749,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 5 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 5 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/buku.jpg"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -619,14 +767,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 6 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 6 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/buku.jpg"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -635,17 +785,15 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
+            </div></a
+          >
         </div>
       </div>
-      <div>
-        <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-12"
-        >
-          Selengkapnya
-        </button>
-      </div>
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-10"
+      >
+        Selengkapnya
+      </button>
     </section>
 
     <!-- buku Novel terlaris -->
@@ -655,12 +803,14 @@
       </h1>
 
       <!-- Container for the cards, with horizontal scrolling on mobile -->
-      <div class="card overflow-x-auto">
-        <div class="flex space-x-4 justify-center">
-          <!-- Card 1 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
+      <div
+        class="card container-card flex md:justify-center gap-x-4 overflow-auto snap-x"
+      >
+        <!-- card 1 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
               src="images/anak.jpg"
               alt="Product 1"
@@ -671,12 +821,14 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 2 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
               src="images/anak.jpg"
               alt="Product 1"
@@ -687,12 +839,14 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 3 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
               src="images/anak.jpg"
               alt="Product 1"
@@ -703,12 +857,14 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 4 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
               src="images/anak.jpg"
               alt="Product 1"
@@ -719,12 +875,14 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 5 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 5 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
               src="images/anak.jpg"
               alt="Product 1"
@@ -735,12 +893,14 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 6 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 6 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
               src="images/anak.jpg"
               alt="Product 1"
@@ -751,34 +911,34 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
+            </div></a
+          >
         </div>
       </div>
-      <div>
-        <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-12"
-        >
-          Selengkapnya
-        </button>
-      </div>
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-10"
+      >
+        Selengkapnya
+      </button>
     </section>
 
     <!-- buku islam -->
     <section class="container mx-auto p-4 mt-16">
       <h1 class="text-2xl font-bold mb-4 text-center">
-        MIZANSTORE BUKU AGAMA ISLAM TERLARIS
+        MIZANSTORE BUKU ISLAM TERLARIS
       </h1>
 
       <!-- Container for the cards, with horizontal scrolling on mobile -->
-      <div class="card overflow-x-auto">
-        <div class="flex space-x-4 justify-center">
-          <!-- Card 1 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
+      <div
+        class="card container-card flex md:justify-center gap-x-4 overflow-auto snap-x"
+      >
+        <!-- card 1 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/novel 1.png"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -787,14 +947,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 2 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/novel 1.png"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -803,14 +965,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 3 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/novel 1.png"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -819,14 +983,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 4 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/novel 1.png"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -835,14 +1001,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 5 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 5 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/novel 1.png"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -851,14 +1019,16 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 6 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
+            </div></a
           >
+        </div>
+        <!-- card 6 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
             <img
-              src="images/novel 1.png"
+              src="images/anak.jpg"
               alt="Product 1"
               class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
             />
@@ -867,17 +1037,15 @@
             <div class="flex flex-col items-start mt-3">
               <span class="text-gray-500 line-through">Rp 69.000</span>
               <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
+            </div></a
+          >
         </div>
       </div>
-      <div>
-        <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-12"
-        >
-          Selengkapnya
-        </button>
-      </div>
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-10"
+      >
+        Selengkapnya
+      </button>
     </section>
 
     <!-- buku terbaru -->
@@ -885,216 +1053,236 @@
       <h1 class="text-2xl font-bold mb-4 text-center">BUKU TERBARU</h1>
 
       <!-- Container for the cards, with horizontal scrolling on mobile -->
-      <div class="card overflow-x-auto">
-        <div class="flex space-x-4 justify-center">
-          <!-- Card 1 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
-            <img
-              src="images/novel 1.png"
-              alt="Product 1"
-              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-            />
-            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-            <span class="text-gray-500">Noor H. Dee</span>
-            <div class="flex flex-col items-start mt-3">
-              <span class="text-gray-500 line-through">Rp 69.000</span>
-              <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
-            <img
-              src="images/novel 1.png"
-              alt="Product 1"
-              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-            />
-            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-            <span class="text-gray-500">Noor H. Dee</span>
-            <div class="flex flex-col items-start mt-3">
-              <span class="text-gray-500 line-through">Rp 69.000</span>
-              <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
-            <img
-              src="images/novel 1.png"
-              alt="Product 1"
-              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-            />
-            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-            <span class="text-gray-500">Noor H. Dee</span>
-            <div class="flex flex-col items-start mt-3">
-              <span class="text-gray-500 line-through">Rp 69.000</span>
-              <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
-            <img
-              src="images/novel 1.png"
-              alt="Product 1"
-              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-            />
-            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-            <span class="text-gray-500">Noor H. Dee</span>
-            <div class="flex flex-col items-start mt-3">
-              <span class="text-gray-500 line-through">Rp 69.000</span>
-              <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 5 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
-            <img
-              src="images/novel 1.png"
-              alt="Product 1"
-              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-            />
-            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-            <span class="text-gray-500">Noor H. Dee</span>
-            <div class="flex flex-col items-start mt-3">
-              <span class="text-gray-500 line-through">Rp 69.000</span>
-              <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-          <!-- Card 6 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-          >
-            <img
-              src="images/novel 1.png"
-              alt="Product 1"
-              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-            />
-            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-            <span class="text-gray-500">Noor H. Dee</span>
-            <div class="flex flex-col items-start mt-3">
-              <span class="text-gray-500 line-through">Rp 69.000</span>
-              <span class="text-red-500">Rp 58.650</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <!-- kedua -->
-        <div class="card overflow-x-auto mt-6">
-          <div class="flex space-x-4 justify-center">
-            <!-- Card 1 -->
-            <div
-              class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-            >
-              <img
-                src="images/novel 1.png"
-                alt="Product 1"
-                class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-              />
-              <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-              <span class="text-gray-500">Noor H. Dee</span>
-              <div class="flex flex-col items-start mt-3">
-                <span class="text-gray-500 line-through">Rp 69.000</span>
-                <span class="text-red-500">Rp 58.650</span>
-              </div>
-            </div>
-            <!-- Card 2 -->
-            <div
-              class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-            >
-              <img
-                src="images/novel 1.png"
-                alt="Product 1"
-                class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-              />
-              <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-              <span class="text-gray-500">Noor H. Dee</span>
-              <div class="flex flex-col items-start mt-3">
-                <span class="text-gray-500 line-through">Rp 69.000</span>
-                <span class="text-red-500">Rp 58.650</span>
-              </div>
-            </div>
-            <!-- Card 3 -->
-            <div
-              class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-            >
-              <img
-                src="images/novel 1.png"
-                alt="Product 1"
-                class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-              />
-              <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-              <span class="text-gray-500">Noor H. Dee</span>
-              <div class="flex flex-col items-start mt-3">
-                <span class="text-gray-500 line-through">Rp 69.000</span>
-                <span class="text-red-500">Rp 58.650</span>
-              </div>
-            </div>
-            <!-- Card 4 -->
-            <div
-              class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-            >
-              <img
-                src="images/novel 1.png"
-                alt="Product 1"
-                class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-              />
-              <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-              <span class="text-gray-500">Noor H. Dee</span>
-              <div class="flex flex-col items-start mt-3">
-                <span class="text-gray-500 line-through">Rp 69.000</span>
-                <span class="text-red-500">Rp 58.650</span>
-              </div>
-            </div>
-            <!-- Card 5 -->
-            <div
-              class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-            >
-              <img
-                src="images/novel 1.png"
-                alt="Product 1"
-                class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-              />
-              <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-              <span class="text-gray-500">Noor H. Dee</span>
-              <div class="flex flex-col items-start mt-3">
-                <span class="text-gray-500 line-through">Rp 69.000</span>
-                <span class="text-red-500">Rp 58.650</span>
-              </div>
-            </div>
-            <!-- Card 6 -->
-            <div
-              class="bg-white shadow-md rounded-lg p-4 flex-none flex flex-col"
-            >
-              <img
-                src="images/novel 1.png"
-                alt="Product 1"
-                class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
-              />
-              <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
-              <span class="text-gray-500">Noor H. Dee</span>
-              <div class="flex flex-col items-start mt-3">
-                <span class="text-gray-500 line-through">Rp 69.000</span>
-                <span class="text-red-500">Rp 58.650</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-10"
+      <div
+        class="card container-card flex md:justify-center gap-x-4 overflow-auto snap-x"
+      >
+        <!-- card 1 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
         >
-          Selengkapnya
-        </button>
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 2 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 3 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 4 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 5 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 6 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
       </div>
+      <!-- card 2 -->
+      <div
+        class="card container-card flex md:justify-center gap-x-4 overflow-auto snap-x mt-5"
+      >
+        <!-- card 1 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 2 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 3 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 4 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 5 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+        <!-- card 6 -->
+        <div
+          class="card bg-white shadow-md shrink-0 rounded-lg p-4 flex flex-col snap-start"
+        >
+          <a href="cabang.html">
+            <img
+              src="images/anak.jpg"
+              alt="Product 1"
+              class="rounded-md mb-2 h-[150px] w-[120px] hover:opacity-45 duration-500"
+            />
+            <h3 class="text-gray-700 uppercase font-bold">Seri Keluarga</h3>
+            <span class="text-gray-500">Noor H. Dee</span>
+            <div class="flex flex-col items-start mt-3">
+              <span class="text-gray-500 line-through">Rp 69.000</span>
+              <span class="text-red-500">Rp 58.650</span>
+            </div></a
+          >
+        </div>
+      </div>
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6 absolute right-10"
+      >
+        Selengkapnya
+      </button>
     </section>
 
     <footer class="bg-gray-800 text-white py-8 mt-16">
@@ -1178,6 +1366,7 @@
   </body>
 
   <script>
+    // navbar
     document
       .getElementById("menu-toggle")
       .addEventListener("click", function () {
@@ -1188,5 +1377,63 @@
           mobileMenu.classList.add("hidden");
         }
       });
+
+    // carousel
+    const carousel = document.getElementById("carousel");
+    const slides = document.querySelectorAll("#carousel img");
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    const intervalTime = 3000; // Time for auto-slide (in milliseconds)
+    let autoSlide;
+
+    // Function to update the carousel position
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Function to go to the next slide
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    }
+
+    // Function to go to the previous slide
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    // Event listeners for next and prev buttons
+    document.getElementById("next").addEventListener("click", nextSlide);
+    document.getElementById("prev").addEventListener("click", prevSlide);
+
+    // Auto-play functionality
+    function startAutoSlide() {
+      autoSlide = setInterval(nextSlide, intervalTime);
+    }
+
+    // Stop auto-play on user interaction
+    function stopAutoSlide() {
+      clearInterval(autoSlide);
+    }
+
+    // Start auto-slide when the page loads
+    startAutoSlide();
+
+    // Stop auto-slide when buttons are clicked
+    document.getElementById("next").addEventListener("click", stopAutoSlide);
+    document.getElementById("prev").addEventListener("click", stopAutoSlide);
+
+    const kategori = document.getElementById("kategori");
+    const ngilang = document.getElementById("ngilang");
+
+    // kategori
+    kategori.addEventListener("mouseenter", function () {
+      ngilang.classList.remove("hidden");
+    });
+
+    ngilang.addEventListener("mouseleave", function () {
+      ngilang.classList.add("hidden");
+    });
   </script>
 </html>
